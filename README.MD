@@ -29,13 +29,12 @@ Data_Analyst_Assignment/
 
 - ### Spreadsheet Proficiency - Ticket Analysis
 - Open `Ticket_Analysis.xlsx` in Excel or Google Sheets.
-- ### Spreadsheet Proficiency - Ticket Analysis
-  1. Populating 'ticket_created_at' in feedbacks:
+- Populating 'ticket_created_at' in feedbacks:
     ```
      - Used XLOOKUP to fetch 'created_at' from 'ticket' sheet based on cms_id.
      - Formula: =XLOOKUP(E2, ticket!E:E, ticket!B:B, "")
   ```
-  2. Outlet-wise counts:
+- Outlet-wise counts:
   ```
     - Same Day: =SUMPRODUCT((ticket!D$2:D$100=A2)*(INT(ticket!B$2:B$100)=INT(ticket!C$2:C$100)))
     - Same Hour: =SUMPRODUCT((ticket!D$2:D$100=A2)*(TEXT(ticket!B$2:B$100,"yyyy-mm-dd hh")=TEXT(ticket!C$2:C$100,"yyyy-mm-dd hh")))
