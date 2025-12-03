@@ -27,7 +27,7 @@ Data_Analyst_Assignment/
 - The `.sql` files contain DDL and sample inserts. Load them into your DB (MySQL/Postgres) to create sample data.
 - `02_Hotel_Queries.sql` and `04_Clinic_Queries.sql` contain solution queries. Some use functions (DATE_FORMAT, ROW_NUMBER, window functions) which may be DB-specific. Adjust DATE_TRUNC/DATE_FORMAT accordingly.
 
-- ### Spreadsheet Proficiency - Ticket Analysis
+### Spreadsheet Proficiency - Ticket Analysis
 - Open `Ticket_Analysis.xlsx` in Excel or Google Sheets.
 - Populating 'ticket_created_at' in feedbacks:
     ```
