@@ -13,6 +13,9 @@ Data_Analyst_Assignment/
 │   └── 04_Clinic_Queries.sql
 ├── Spreadsheets/
 │   └── Ticket_Analysis.xlsx
+|   |___Ticket_Analysis - ticket.csv
+|   |___Ticket_Analysis - feedbacks.csv
+|   |___Ticket_Analysis - summary.csv
 ├── Python/
 │   ├── 01_Time_Converter.py
 │   └── 02_Remove_Duplicates.py
