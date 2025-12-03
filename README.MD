@@ -27,11 +27,19 @@ Data_Analyst_Assignment/
 - The `.sql` files contain DDL and sample inserts. Load them into your DB (MySQL/Postgres) to create sample data.
 - `02_Hotel_Queries.sql` and `04_Clinic_Queries.sql` contain solution queries. Some use functions (DATE_FORMAT, ROW_NUMBER, window functions) which may be DB-specific. Adjust DATE_TRUNC/DATE_FORMAT accordingly.
 
-### Spreadsheets
+- ### Spreadsheet Proficiency - Ticket Analysis
 - Open `Ticket_Analysis.xlsx` in Excel or Google Sheets.
-- `Feedbacks!D` contains an INDEX/MATCH formula to populate `ticket_created_at` from `Tickets`.
-- `Tickets` sheet includes helper columns and formulas for same-day and same-hour calculations.
-- `Summary` sheet aggregates outlet-wise counts using SUMIFS.
+- ### Spreadsheet Proficiency - Ticket Analysis
+  1. Populating 'ticket_created_at' in feedbacks:
+    ```
+     - Used XLOOKUP to fetch 'created_at' from 'ticket' sheet based on cms_id.
+     - Formula: =XLOOKUP(E2, ticket!E:E, ticket!B:B, "")
+  ```
+  2. Outlet-wise counts:
+  ```
+    - Same Day: =SUMPRODUCT((ticket!D$2:D$100=A2)*(INT(ticket!B$2:B$100)=INT(ticket!C$2:C$100)))
+    - Same Hour: =SUMPRODUCT((ticket!D$2:D$100=A2)*(TEXT(ticket!B$2:B$100,"yyyy-mm-dd hh")=TEXT(ticket!C$2:C$100,"yyyy-mm-dd hh")))
+  ```
 - Ticket analysis Excel file link: 
 - [https://docs.google.com/spreadsheets/d/1erE-UJUf4OnQUKY-TwVBiKOAgZUnCcWO_s8s1Q8NpP4/edit?gid=0#gid=0]
 
