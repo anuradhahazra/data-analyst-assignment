@@ -5,24 +5,21 @@ Remove duplicate characters from a string preserving first occurrence.
 Must use a loop (as required).
 """
 
+
 def unique_string_loop(s: str) -> str:
     if s is None:
         return ""
-    seen = set()
-    out_chars = []
+    seen = set()          # Keep track of characters already added (O(1) lookup)
+    out_chars = []        # Store output characters
     for ch in s:
         if ch not in seen:
             seen.add(ch)
             out_chars.append(ch)
     return "".join(out_chars)
 
-if __name__ == "__main__":
-    tests = [
-        "banana",
-        "aabbcc",
-        "hello world",
-        "1122334455",
-        ""
-    ]
-    for t in tests:
-        print(f"'{t}' -> '{unique_string_loop(t)}'")
+
+# Take single input from the user
+user_input = input("Enter a string: ")
+
+# Print the output
+print(f"'{user_input}' -> '{unique_string_loop(user_input)}'")

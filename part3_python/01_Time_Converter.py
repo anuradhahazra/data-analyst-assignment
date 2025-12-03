@@ -9,6 +9,7 @@ Examples:
 0   -> "0 minutes"
 """
 
+
 def minutes_to_human(minutes: int) -> str:
     if minutes is None:
         raise ValueError("minutes must be an integer")
@@ -25,7 +26,9 @@ def minutes_to_human(minutes: int) -> str:
         return "0 minutes"
     return " ".join(parts)
 
-if __name__ == "__main__":
-    samples = [130, 110, 1, 60, 0, 245]
-    for s in samples:
-        print(f"{s} -> {minutes_to_human(s)}")
+
+# Take a single input from the user
+minutes = int(input("Enter minutes: "))
+
+# Print output
+print(f"{minutes} -> {minutes_to_human(minutes)}")
