@@ -3,6 +3,8 @@
 This repository contains solutions for a data analyst assignment covering SQL, Spreadsheets, and Python.
 
 ## Structure
+
+```
 Data_Analyst_Assignment/
 ├── SQL/
 │   ├── 01_Hotel_Schema_Setup.sql
@@ -11,11 +13,15 @@ Data_Analyst_Assignment/
 │   └── 04_Clinic_Queries.sql
 ├── Spreadsheets/
 │   └── Ticket_Analysis.xlsx
+|   |___Ticket_Analysis - ticket.csv
+|   |___Ticket_Analysis - feedbacks.csv
+|   |___Ticket_Analysis - summary.csv
 ├── Python/
 │   ├── 01_Time_Converter.py
 │   └── 02_Remove_Duplicates.py
+```
 
-## How to run / use
+## How to run/use
 
 ### SQL
 - The `.sql` files contain DDL and sample inserts. Load them into your DB (MySQL/Postgres) to create sample data.
@@ -26,7 +32,7 @@ Data_Analyst_Assignment/
 - `Feedbacks!D` contains an INDEX/MATCH formula to populate `ticket_created_at` from `Tickets`.
 - `Tickets` sheet includes helper columns and formulas for same-day and same-hour calculations.
 - `Summary` sheet aggregates outlet-wise counts using SUMIFS.
-- Ticket analysis excel file link: 
+- Ticket analysis Excel file link: 
 - [https://docs.google.com/spreadsheets/d/1erE-UJUf4OnQUKY-TwVBiKOAgZUnCcWO_s8s1Q8NpP4/edit?gid=0#gid=0]
 
 ### Python
@@ -36,4 +42,4 @@ Data_Analyst_Assignment/
 
 ## Notes
 - Date/time functions differ between MySQL/Postgres/SQLite. Adapt syntax when running in a specific RDBMS.
-- Spreadsheet formulas are written for Excel but compatible with Google Sheets in most cases.
+- Spreadsheet formulas are written for Excel but are compatible with Google Sheets in most cases.
