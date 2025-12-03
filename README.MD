@@ -34,6 +34,10 @@ Data_Analyst_Assignment/
      - Used XLOOKUP to fetch 'created_at' from 'ticket' sheet based on cms_id.
      - Formula: =XLOOKUP(E2, ticket!E:E, ticket!B:B, "")
   ```
+  Convert the ticket created_at and closed_at strings to datetime using this formula
+  ```
+   Formula =DATE(MID(B2,7,4), MID(B2,4,2), LEFT(B2,2)) + TIMEVALUE(MID(B2,12,5))
+  ```
 - Outlet-wise counts:
   ```
     - Same Day: =SUMPRODUCT((ticket!D$2:D$100=A2)*(INT(ticket!B$2:B$100)=INT(ticket!C$2:C$100)))
